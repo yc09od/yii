@@ -26,5 +26,10 @@ phpunit.phar
 # local phpunit config
 /phpunit.xml
 
+
+# for yii
+db.php
+/config
+
 tests/_output/*
 tests/_support/_generated
