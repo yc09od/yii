@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\EnterForm;
 
 class SiteController extends Controller
 {
@@ -125,5 +126,19 @@ class SiteController extends Controller
 
     public function actionSay($message = 'fk u back'){
         return $this->render('say',['message' => $message]);
+    }
+
+    public function actionEnter()
+    {
+        $model = new EnterForm;
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
+
+            return $this->render('enter-confirm', ['model' => $model]);
+        } else {
+
+            return $this->render('entry', ['model' => $model]);
+        }
     }
 }
