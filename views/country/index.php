@@ -1,48 +1,34 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: horst
- * Date: 9/2/16
- * Time: 1:04 AM
- */
 use yii\helpers\Html;
-use yii\widgets\LinkPager;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\models\CountrySearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Countries';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
+<div class="country-index">
 
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <table class="table table-bordered table-responsive table-striped">
-                <thead class="bg-primary">
-                <tr>
-                    <th>
-                        Country
-                    </th>
-                    <th>
-                        Code
-                    </th>
-                    <th>
-                        Population
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php foreach($countries as $country){ ?>
-                    <tr>
-                        <td><?php echo Html::encode("{$country->name}")?></td>
-                        <td><?php echo Html::encode("{$country->code}")?></td>
-                        <td><?php echo Html::encode("{$country->population}")?></td>
-                    </tr>
-                <?php } ?>
-                </tbody>
-            </table>
-        </div>
+    <p>
+        <?= Html::a('Create Country', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
 
-        <div class="col-lg-12 text-center">
-            <?php echo LinkPager::widget(['pagination' => $pagination]   )?>
-        </div>
-    </div>
+            'code',
+            'name',
+            'population',
 
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
 </div>

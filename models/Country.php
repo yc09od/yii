@@ -1,32 +1,48 @@
 <?php
+
+namespace app\models;
+
+use Yii;
+
 /**
- * Created by PhpStorm.
- * User: horst
-<<<<<<< HEAD
- * Date: 9/2/16
- * Time: 12:49 AM
+ * This is the model class for table "country".
+ *
+ * @property string $code
+ * @property string $name
+ * @property integer $population
  */
-namespace app\models;
+class Country extends \yii\db\ActiveRecord
+{
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
+    {
+        return 'country';
+    }
 
-use yii;
-use yii\db\ActiveRecord;
+    /**
+     * @inheritdoc
+     */
+    public function rules()
+    {
+        return [
+            [['code', 'name'], 'required'],
+            [['population'], 'integer'],
+            [['code'], 'string', 'max' => 2],
+            [['name'], 'string', 'max' => 52],
+        ];
+    }
 
-
-class Country extends ActiveRecord{
-
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'code' => 'Code',
+            'name' => 'Name',
+            'population' => 'Population',
+        ];
+    }
 }
-
-
-?>
-=======
- * Date: 9/1/16
- * Time: 10:47 PM
- */
-namespace app\models;
-
-use yii\db\ActiveRecord;
-
-class Country extends ActiveRecord{
-
-}
->>>>>>> 5c2cd6df72fca0bcc78a9902047e490d28aeaca2
