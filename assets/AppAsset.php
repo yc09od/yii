@@ -22,7 +22,7 @@ class AppAsset extends AssetBundle
         'css/bootstrap/bootstrap.min.css'
     ];
     public $js = [
-        'js/test.js',
+        'js/require.js',
         'js/bootstrap/bootstrap.min.js'
     ];
     public $depends = [

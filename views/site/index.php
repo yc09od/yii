@@ -1,8 +1,12 @@
 <?php
 
 /* @var $this yii\web\View */
+use \app\assets\AppAsset;
 
 $this->title = 'My Yii Application';
+
+AppAsset::addScript($this,"@web/js/main.js");
+
 ?>
 
 
@@ -97,4 +101,9 @@ $this->title = 'My Yii Application';
         </div>
 
     </div>
+</div>
+
+
+<div id = "test">
+    <p data-bind = "text : test, click : function(){$root.test('for haha')}"></p>
 </div>
