@@ -6,10 +6,10 @@ $this->title = 'My Yii Application';
 ?>
 
 
+<!--
 
 <div class="row">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
 
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -48,10 +48,10 @@ $this->title = 'My Yii Application';
         <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> </div>
 
 </div>
+-->
 
 
-
-<div class="site-index">
+<div class="site-index container" style = "margin-top : 20px">
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
