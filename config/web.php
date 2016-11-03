@@ -49,7 +49,10 @@ $config = [
         'assetManager' => [
             'bundles' => [
                 'yii\web\JqueryAsset' => [
-                    'js'=>[]
+                    'sourcePath' => null,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'js'=>['js/jquery-3.1.1.min.js']
                 ],
                 'yii\bootstrap\BootstrapPluginAsset' => [
                     'js'=>[]
