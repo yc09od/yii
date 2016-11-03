@@ -1,7 +1,7 @@
 /**
  * Created by ycui on 11/3/2016.
  */
-require(['js/knockout','js/test'],function (ko) {
+require(['js/knockout','js/sweetalert2.min.js','js/test'],function (ko) {
 
     function Main() {
         var self = this;

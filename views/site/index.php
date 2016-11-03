@@ -6,6 +6,7 @@ use \app\assets\AppAsset;
 $this->title = 'My Yii Application';
 
 AppAsset::addScript($this,"@web/js/main.js");
+AppAsset::addCss($this,"@web/css/sweetalert2.min.css");
 
 ?>
 
@@ -105,5 +106,5 @@ AppAsset::addScript($this,"@web/js/main.js");
 
 
 <div id = "test">
-    <p data-bind = "text : test, click : function(){$root.test('for haha')}"></p>
+    <p data-bind = "text : test" onclick = "swal('haha')"></p>
 </div>
