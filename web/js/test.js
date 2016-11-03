@@ -4,4 +4,4 @@
 
 //this is a test file
 
-alert("yes");
+console.log("this is test.js");
