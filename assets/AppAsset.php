@@ -22,12 +22,13 @@ class AppAsset extends AssetBundle
         'css/bootstrap/bootstrap.min.css'
     ];
     public $js = [
-        'js/require.js',
-        'js/bootstrap/bootstrap.min.js'
+        'jquery-3.1.1.min',
+        'js/bootstrap/bootstrap.min.js',
+        'js/require.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
+        //'yii\bootstrap\BootstrapAsset',
     ];
 
     public static function addScript($view, $jsfile) {
