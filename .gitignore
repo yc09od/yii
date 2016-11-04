@@ -29,8 +29,8 @@ phpunit.phar
 
 
 # for yii
-#db.php
-#/config
+db.php
+/config
 
 tests/_output/*
 tests/_support/_generated
