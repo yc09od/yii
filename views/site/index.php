@@ -62,10 +62,11 @@ AppAsset::addCss($this,"@web/css/main.css");
 
     <div class="container-fluid row margin-top-2" style = "background-color : #afafaf;box-shadow: 0 0 3px gray;">
         <div class="container">
-              <div class = "col-lg-6">
-                <h1>This is Mr. Red</h1>
+              <div class = "col-lg-4 col-lg-offset-2">
+                <h1 class= "text-center text-sans-serif" style = "margin-top: 45%">This is Mr. Red</h1>
+                <h3 class= "text-center text-sans-serif">A good team member, a good programer</h1>
               </div>
-              <div class = "col-lg-4 col-lg-offset-1">
+              <div class = "col-lg-4">
                 <img style = "width: 100%" src="picture/main/author.png" alt="Cinque Terre">
               </div>
         </div>
