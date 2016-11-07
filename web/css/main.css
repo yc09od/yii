@@ -1,0 +1,61 @@
+#index-slide{
+    background-image: url("../picture/main/wallpaper1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 3px gray;
+}
+
+h1.index-slide-title{
+    font-family:cursive;
+    text-align: left;
+    margin-top: 43%;
+    font-size:4.3em;
+    color: #5F5E5A;
+}
+h3.index-slide-content{
+    font-family:cursive;
+    text-align: left;
+    font-size:2.3em;
+    color: #5F5E5A;
+}
+
+@media screen and (max-width: 750px){
+    #index-slide{
+        min-height: 250px;
+    }
+    [id^='slide-']{
+        min-height: 250px;
+    }
+}
+
+@media screen and (min-width: 750px){
+    #index-slide{
+        min-height: 300px;
+    }
+    [id^='slide-']{
+        min-height: 300px;
+    }
+}
+
+
+@media screen and (min-width: 970px){
+    #index-slide{
+        min-height: 400px;
+    }
+    [id^='slide-']{
+        min-height: 400px;
+    }
+}
+
+
+@media screen and (min-width: 1170px){
+    #index-slide{
+        min-height: 500px;
+    }
+    [id^='slide-']{
+        min-height: 500px;
+    }
+
+}
+
+

@@ -3,108 +3,73 @@
 /* @var $this yii\web\View */
 use \app\assets\AppAsset;
 
-$this->title = 'My Yii Application';
+$this->title = 'Yanglong Cui(eggplantcui)';
 
 AppAsset::addScript($this,"@web/js/main.js");
 AppAsset::addCss($this,"@web/css/sweetalert2.min.css");
+AppAsset::addCss($this,"@web/css/main.css");
 
 ?>
 
-
-<!--
-
-<div class="row">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="item active"> <img src="http://lorempixel.com/1200/400/sports" style="width:100%" alt="First slide">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Slide 1</h1>
-                        <p>Aenean a rutrum nulla. Vestibulum a arcu at nisi tristique pretium.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                    </div>
+<div id = "main">
+    <div id = "index-slide" class="container-fluid row">
+        <div id = "slide-1" class="container">
+            <div class="row">
+                <div class= "col-lg-4 col-lg-offset-1">
+                    <h1 class = "index-slide-title">Welcome !</h1>
+                    <h3 class = "index-slide-content">My personal website</h3>
+                    <h3 class = "index-slide-content">-Yanglong Cui</h3>
+                </div>
+                <div class= "col-lg-6 col-lg-offset-1" style = "overflow : hidden;margin-top:5.5%">
+                        <img style = "width: 100%;overflow: hidden;border-radius: 3px 3px 0 0;box-shadow: 0 0 4px lightgrey;" src="picture/main/main-slider-item-1.bmp" alt="Cinque Terre">
                 </div>
             </div>
-            <div class="item"> <img src="http://lorempixel.com/1200/400/people" style="width:100%" data-src="" alt="Second    slide">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Slide 2</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae egestas purus. </p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                    </div>
+        </div>
+        <!--
+        <div id = "slide-2" class="container">
+                <div class="row">
+                    <div class="col-lg-12">yes</div>
                 </div>
-            </div>
-            <div class="item"> <img src="http://lorempixel.com/1200/400/abstract" style="width:100%" data-src="" alt="Third slide">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Slide 3</h1>
-                        <p>Donec sit amet mi imperdiet mauris viverra accumsan ut at libero.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+        </div>
+        <div id = "slide-3" class="container">
+                <div class="row">
+                    <div class="col-lg-12">yes</div>
+                </div>
+        </div>
+        -->
+    </div>
+
+    <div class="site-index container margin-top-2 margin-bottom-3">
+        <div class= "row">
+            <h1 class="text-center" style = "font-weight: bolder;font-size: 3em;font-family: sans-serif;">What do I have <span class="glyphicon glyphicon-ok-circle text-success" style = "font-size : 28px"></span></h1>
+        </div>
+
+        <div class= "row" style = "margin-top:20px" data-bind = "foreach : board_content">
+            <div class = "col-lg-4 margin-bottom-2">
+                <div class = "col-lg-8 col-lg-offset-2">
+                    <img class="img-responsive img-rounded" alt="Cinque Terre" data-bind="attr: { src: img}">
+                </div>
+                <div class = "col-lg-10 col-lg-offset-1">
+                    <h1 class= "text-center text-sans-serif" style = "color: #4f4f4f;" data-bind="text : title"></h1>
+                    <p class= "text-center text-sans-serif" style = "color: #4f4f4f;min-height: 60px" data-bind="text : content">Him rendered may attended concerns jennings reserved now. Sympathize did now preference unpleasing mrs few. Sympathize did now preference unpleasing mrs few.</p>
+                    <div class = "col-lg-12 text-center">
+                        <a href="javascript:void(0)" rule = "button" class="btn btn-primary" data-bind="attr: { href: link}">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> </div>
-
-</div>
--->
-
-
-<div class="site-index container" style = "margin-top : 20px">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
     </div>
 
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
+    <div class="container-fluid row margin-top-2" style = "background-color : #afafaf;box-shadow: 0 0 3px gray;">
+        <div class="container">
+              <div class = "col-lg-6">
+                <h1>This is Mr. Red</h1>
+              </div>
+              <div class = "col-lg-4 col-lg-offset-1">
+                <img style = "width: 100%" src="picture/main/author.png" alt="Cinque Terre">
+              </div>
         </div>
-
     </div>
-</div>
 
 
-<div id = "test">
-    <p data-bind = "text : test" onclick = "swal('haha')"></p>
 </div>
