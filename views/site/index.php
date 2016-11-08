@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 use \app\assets\AppAsset;
+use yii\helpers\Url;
 
 $this->title = 'Yanglong Cui(eggplantcui)';
 
@@ -53,7 +54,7 @@ AppAsset::addCss($this,"@web/css/main.css");
                     <h1 class= "text-center text-sans-serif" style = "color: #4f4f4f;" data-bind="text : title"></h1>
                     <p class= "text-center text-sans-serif" style = "color: #4f4f4f;min-height: 60px" data-bind="text : content">Him rendered may attended concerns jennings reserved now. Sympathize did now preference unpleasing mrs few. Sympathize did now preference unpleasing mrs few.</p>
                     <div class = "col-lg-12 text-center">
-                        <a href="javascript:void(0)" rule = "button" class="btn btn-primary" data-bind="attr: { href: link}">Learn More</a>
+                        <a href="javascript:void(0)" rule = "button" class="btn btn-primary" data-bind="attr: { href : link}">Learn More</a>
                     </div>
                 </div>
             </div>

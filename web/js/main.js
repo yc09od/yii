@@ -6,25 +6,25 @@ require(['js/knockout',
     'js/sweetalert2.min.js',
     'js/test'
 ],function (ko,$) {
-
+    var location = window.location.toString();
     var board_content = [
         {
             title : 'Resume',
             img : 'picture/main/resume.jpg',
             content : 'Welcome to check my latest resume online. The social links are also included.',
-            link : '#'
+            link : location.slice(0,location.indexOf("site%2")) + "about-me%2Fresume"
         },
         {
-            title : 'Prodect',
+            title : 'Project',
             img : 'picture/main/prodect.jpg',
             content : 'Find all I did, contact me if any projects or products are interesting to you.',
-            link : '#'
+            link : location.slice(0,location.indexOf("site%2")) + "about-me%2Fprojects"
         },
         {
             title : 'Experience',
             img : 'picture/main/experience.jpg',
             content : 'What I Experienced, My treasure, may also form an cooperation opportunities to us.',
-            link : '#'
+            link : location.slice(0,location.indexOf("site%2")) + "about-me%2Fexperience"
         }
     ];
 
