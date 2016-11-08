@@ -16,9 +16,9 @@ AppAsset::addCss($this,"@web/css/main.css");
         <div id = "slide-1" class="container">
             <div class="row">
                 <div class= "col-lg-4 col-lg-offset-1">
-                    <h1 class = "index-slide-title">Welcome !</h1>
-                    <h3 class = "index-slide-content">My personal website</h3>
-                    <h3 class = "index-slide-content">-Yanglong Cui</h3>
+                    <h1 class = "index-slide-title text-center">Welcome !</h1>
+                    <h3 class = "index-slide-content text-center">My personal website</h3>
+                    <h3 class = "index-slide-content text-right">-Yanglong Cui</h3>
                 </div>
                 <div class= "col-lg-6 col-lg-offset-1" style = "overflow : hidden;margin-top:5.5%">
                         <img style = "width: 100%;overflow: hidden;border-radius: 3px 3px 0 0;box-shadow: 0 0 4px lightgrey;" src="picture/main/main-slider-item-1.bmp" alt="Cinque Terre">
@@ -41,7 +41,7 @@ AppAsset::addCss($this,"@web/css/main.css");
 
     <div class="site-index container margin-top-2 margin-bottom-3">
         <div class= "row">
-            <h1 class="text-center" style = "font-weight: bolder;font-size: 3em;font-family: sans-serif;">What do I have <span class="glyphicon glyphicon-ok-circle text-success" style = "font-size : 28px"></span></h1>
+            <h1 class="text-center" style = "font-weight: bolder;font-size: 3em;font-family: sans-serif;">What do I have<span class="glyphicon glyphicon-ok-circle text-success" style = "font-size : 28px"></span></h1>
         </div>
 
         <div class= "row" style = "margin-top:20px" data-bind = "foreach : board_content">
@@ -63,8 +63,8 @@ AppAsset::addCss($this,"@web/css/main.css");
     <div class="container-fluid row margin-top-2" style = "background-color : #afafaf;box-shadow: 0 0 3px gray;">
         <div class="container">
               <div class = "col-lg-4 col-lg-offset-2">
-                <h1 class= "text-center text-sans-serif" style = "margin-top: 45%">This is Mr. Red</h1>
-                <h3 class= "text-center text-sans-serif">A good team member, a good programer</h1>
+                <h1 class= "text-center text-sans-serif" style = "margin-top: 45%">This is Mr. Cui</h1>
+                <h3 class= "text-center text-sans-serif">A good team member, a good programer</h3>
               </div>
               <div class = "col-lg-4">
                 <img style = "width: 100%" src="picture/main/author.png" alt="Cinque Terre">
