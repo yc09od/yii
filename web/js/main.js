@@ -7,16 +7,16 @@ require(['js/knockout',
     'js/test'
 ],function (ko,$) {
     var location = window.location.toString();
-    if(location.indexOf('index') >=0 ){
-        if(location.indexOf("r=")){
+    if(location.indexOf('index') >= 0 ){
+        if(location.indexOf("r=") >= 0){
             location = location.slice(0,location.indexOf("site%2")) + "about-me%2F";
         }else{
-            location += "r=about-me%2F";
+            location += "?r=about-me%2F";
         }
     }else{
         location += "index.php?r=about-me%2F";
     }
-    // location.indexOf('site%2')>=0?location = location.slice(0,location.indexOf("site%2")) + "about-me%2F":location += "index.php?r=about-me%2F";
+
     var board_content = [
         {
             title : 'Resume',
