@@ -3,14 +3,89 @@
 /* @var $this yii\web\View */
 use \app\assets\AppAsset;
 
-$this->title = 'Yanglong Cui(eggplantcui)';
+$this->title = 'Yanglong Cui\'s resume';
 
-AppAsset::addScript($this,"@web/js/main.js");
-AppAsset::addCss($this,"@web/css/sweetalert2.min.css");
-AppAsset::addCss($this,"@web/css/main.css");
+AppAsset::addScript($this,"@web/js/page/about-me/resume.js");
+AppAsset::addCss($this,"@web/css/page/about-me/resume.css");
 
 ?>
 
-<div id = "about-me">
+<div id = "resume">
+    <div class="row top-background"></div>
+    <div class="col-lg-8 col-lg-offset-2 board">
 
+
+        <div class="row margin-top-3">
+            <div class="col-lg-10 col-lg-offset-1">
+                <!--name and contact-->
+                <div class="col-lg-6">
+                    <h1>Yanglong Cui</h1>
+                </div>
+                <div class="col-lg-6" style="margin-top: 22px">
+                    <p class="margin-0 text-right">24 IDA st, ST CATHARINES,ONTARIO</p>
+                    <p class="margin-0 text-right">1 (905) 325-0111 yanglongcui@gmail.com</p>
+                </div>
+                <div class="divider col-lg-12"></div>
+
+
+                <div class="col-lg-12">
+                    <h3>Summary : </h3>
+                    <p>Well experienced Front end Portal development with modern tools like bootstrap,MVVM,PHP.
+                        A good team player, A sick inventor, A true-life photographer and A crazy cook.
+                        Seeking full time Front end and software developer jobs.
+                    </p>
+                </div>
+                <div class="divider col-lg-12"></div>
+
+                <!--working experience-->
+                <div class="col-lg-12">
+                    <h3>Working Experience: </h3>
+
+                    <div class="working-board margin-top-3" data-bind = "foreach : content">
+                        <div class="title">
+                            <h4 class="margin-bottom-0" data-bind = "text : title" >UI developer</h4>
+                        </div>
+                        <div class="companyName">
+                            <p class="margin-0" data-bind = "text : companyName">TELoIP Inc.</p>
+                        </div>
+                        <div class="info">
+                            <span data-bind = "text : startTime.format('ll')">Aug 2016</span> -
+                            <span data-bind = "text : endTime.format('ll')">Present</span>
+                            (<span data-bind = "text : startTime.to(endTime).slice(startTime.to(endTime).indexOf('in'))">4 Month</span>) |
+                            <span data-bind = "text : address">Mississauga, Ontario, Canada</span>
+                        </div>
+                        <div class="summary" data-bind = "foreach : summary">
+                            <p class="margin-0" data-bind = "text : $data">
+                                --develop SCN operational UI base on Zend server
+                            </p>
+                        </div>
+                        <div class="divider col-lg-12" data-bind = "visible : $index == $parent.length - 1"></div>
+                    </div>
+                </div>
+                <div class="divider col-lg-12"></div>
+
+                <!--Education-->
+                <div class="col-lg-12">
+                    <h3>Education</h3>
+                    <h4 class="margin-bottom-0">
+                        Brock University
+                    </h4>
+                    <p class="margin-0">
+                        Bachelor's Degree (with Honours)| Computer Science
+                    </p>
+                    <p class="margin-0">2011-2016</p>
+                    <p class="margin-0">1812 Sir Isaac Brock Way, St. Catharines, ON L2S 3A1</p>
+                </div>
+
+                <div class="col-lg-12 margin-top-3">
+                    <div class="pull-right">
+                        <label>Resume</label>
+                        <a class = "btn btn-primary">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>
