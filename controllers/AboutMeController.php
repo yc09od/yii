@@ -21,11 +21,11 @@ class AboutMeController extends Controller
     }
 
     public function actionProjects(){
-        return $this->render('resume');
+        return $this->render('projects');
     }
 
     public function actionExperience(){
-        return $this->render('resume');
+        return $this->render('experience');
     }
 
 }
