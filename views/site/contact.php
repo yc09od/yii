@@ -7,13 +7,27 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use app\assets\AppAsset;
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
+
+AppAsset::addScript($this,"@web/js/contact.js");
+AppAsset::addCss($this,"@web/css/page/site/contact.css");
+AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/bootstrap-social.css");
+AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/assets/css/font-awesome.css");
 ?>
-<div class="site-contact container-fluid row">
+<div id = "contact" class="site-contact container-fluid row">
     <div class="container">
-        <h1><?= Html::encode($this->title) ?></h1>
+        <div class="col-lg-6 col-lg-offset-3">
+            <h1><?= Html::encode($this->title) ?></h1>
+        </div>
+
+        <div class="col-lg-6 col-lg-offset-3" data-bind = "foreach : board_content().SocialLink">
+            <a class="btn btn-social-icon pull-right" data-bind = "css : 'btn-' + title,attr:{href : link}">
+                <span class="fa" data-bind = "css : 'fa-' + title"></span>
+            </a>
+        </div>
 
         <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
 
@@ -34,36 +48,40 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?php else: ?>
 
-            <p>
-                If you have business inquiries or other questions, please fill out the following form to contact us.
-                Thank you.
-            </p>
+            <div class="clearfix"></div>
+            <div class="col-lg-6 col-lg-offset-3 margin-top-2">
+                <p>
+                    If you have any questions, please fill out the following form to contact me.
+                    It is expected to hear from you.
+                </p>
 
-            <div class="row">
-                <div class="col-lg-5">
+                <div class="row">
+                    <div class="col-lg-12">
 
-                    <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+                        <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+                        <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
 
-                    <?= $form->field($model, 'email') ?>
+                        <?= $form->field($model, 'email') ?>
 
-                    <?= $form->field($model, 'subject') ?>
+                        <?= $form->field($model, 'subject') ?>
 
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+                        <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
+                        <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                            'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                        ]) ?>
 
-                    <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <div class="form-group">
+                            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        </div>
+
+                        <?php ActiveForm::end(); ?>
+
                     </div>
-
-                    <?php ActiveForm::end(); ?>
-
                 </div>
             </div>
+
 
         <?php endif; ?>
     </div>
