@@ -12,4 +12,12 @@
     min-height: 500px;
     box-shadow: 0 0 2px grey;
     padding-bottom: 50px;
+<<<<<<< HEAD
+    border-top: solid #587ea3 10px;
+}
+
+.btn-social-icon{
+    margin : 10px 0 10px 5px;
+=======
+>>>>>>> 05026500512cb868484b90b9dd6fbfa85af75e7f
 }
