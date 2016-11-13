@@ -7,12 +7,8 @@ $this->title = 'Yanglong Cui\'s resume';
 
 AppAsset::addScript($this,"@web/js/page/about-me/resume.js");
 AppAsset::addCss($this,"@web/css/page/about-me/resume.css");
-<<<<<<< HEAD
 AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/bootstrap-social.css");
 AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/assets/css/font-awesome.css");
-=======
->>>>>>> 05026500512cb868484b90b9dd6fbfa85af75e7f
-
 ?>
 
 <div id = "resume">
@@ -22,7 +18,6 @@ AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/assets/css/font-aw
 
         <div class="row margin-top-3">
             <div class="col-lg-10 col-lg-offset-1">
-<<<<<<< HEAD
                 <div class="col-lg-12">
                     <a class="btn btn-social-icon btn-github pull-right" href="https://github.com/yc09od">
                         <span class="fa fa-github"></span>
@@ -36,8 +31,6 @@ AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/assets/css/font-aw
                 </div>
                 <div class="clearfix"></div>
 
-=======
->>>>>>> 05026500512cb868484b90b9dd6fbfa85af75e7f
                 <!--name and contact-->
                 <div class="col-lg-6">
                     <h1>Yanglong Cui</h1>
@@ -64,7 +57,6 @@ AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/assets/css/font-aw
 
                     <div class="working-board margin-top-3" data-bind = "foreach : content">
                         <div class="title">
-<<<<<<< HEAD
                             <h4 class="margin-bottom-0" data-bind = "text : title" ></h4>
                         </div>
                         <div class="companyName">
@@ -78,22 +70,6 @@ AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/assets/css/font-aw
                         </div>
                         <div class="summary" data-bind = "foreach : summary">
                             <p class="margin-0" data-bind = "text : $data">
-=======
-                            <h4 class="margin-bottom-0" data-bind = "text : title" >UI developer</h4>
-                        </div>
-                        <div class="companyName">
-                            <p class="margin-0" data-bind = "text : companyName">TELoIP Inc.</p>
-                        </div>
-                        <div class="info">
-                            <span data-bind = "text : startTime.format('ll')">Aug 2016</span> -
-                            <span data-bind = "text : endTime.format('ll')">Present</span>
-                            (<span data-bind = "text : startTime.to(endTime).slice(startTime.to(endTime).indexOf('in'))">4 Month</span>) |
-                            <span data-bind = "text : address">Mississauga, Ontario, Canada</span>
-                        </div>
-                        <div class="summary" data-bind = "foreach : summary">
-                            <p class="margin-0" data-bind = "text : $data">
-                                --develop SCN operational UI base on Zend server
->>>>>>> 05026500512cb868484b90b9dd6fbfa85af75e7f
                             </p>
                         </div>
                         <div class="divider col-lg-12" data-bind = "visible : $index == $parent.length - 1"></div>
@@ -117,19 +93,11 @@ AppAsset::addCss($this,"@web/vendor/bootstrap-social-gh-pages/assets/css/font-aw
                 <div class="col-lg-12 margin-top-3">
                     <div class="pull-right">
                         <label>Resume</label>
-<<<<<<< HEAD
                         <a class = "btn btn-primary" role="button" href="pdf/resume.pdf">Download</a>
-=======
-                        <a class = "btn btn-primary">Download</a>
->>>>>>> 05026500512cb868484b90b9dd6fbfa85af75e7f
                     </div>
                 </div>
             </div>
         </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 05026500512cb868484b90b9dd6fbfa85af75e7f
     </div>
 </div>
