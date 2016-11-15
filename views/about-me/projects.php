@@ -5,12 +5,11 @@ use \app\assets\AppAsset;
 
 $this->title = 'Yanglong Cui(eggplantcui)';
 
-AppAsset::addScript($this,"@web/js/main.js");
-AppAsset::addCss($this,"@web/css/sweetalert2.min.css");
-AppAsset::addCss($this,"@web/css/main.css");
+AppAsset::addScript($this,"@web/js/page/about-me/project.js");
+AppAsset::addCss($this,"@web/css/page/about-me/project.css");
 
 ?>
 
-<div id = "about-me">
+<div id = "project">
 
 </div>
