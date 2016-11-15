@@ -4,8 +4,7 @@
 require(['js/knockout',
     'js/jquery-3.1.1.min.js',
     'js/moment-with-locales.js',
-    'js/sweetalert2.min.js',
-    'js/test.js',
+    'js/sweetalert2.min.js'
 ],function (ko,$,moment) {
     var location = window.location.toString();
     if(location.indexOf('index') >=0 ){
@@ -69,12 +68,8 @@ require(['js/knockout',
     ];
 
     function ResumeVM() {
-        var resume = this;
-        self.test = ko.observable("yes");
-        self.board_content = ko.observableArray([]);
-        self.board_content(board_content);
+        var self = this;
         self.content = content;
-        console.log(moment("20160101").to(moment("20160202")));
     }
 
     ko.applyBindings(new ResumeVM(), document.getElementById('resume'));
