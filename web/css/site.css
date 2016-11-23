@@ -135,6 +135,18 @@ a.desc:after {
     background-color: #e5e5e5;
 }
 
+.text-white{
+    color: white;
+}
+
+.text-white-smoke{
+    color: whitesmoke;
+}
+
+.text-dark-grey{
+    color: darkgrey;
+}
+
 @media screen and (max-width: 750px){
 
 }

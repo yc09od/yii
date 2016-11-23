@@ -1,14 +1,14 @@
 .top-background{
-    min-height: 200px;
+    min-height: 300px;
     background-image: url("../../../picture/main/wallpaper2.jpg");
-    background-size:cover;
+    background-size: cover;
     box-shadow: 0 0 3px grey;
 }
 
 .board{
     position: relative;
     background-color: white;
-    top:-100px;
+    top:-200px;
     min-height: 500px;
     box-shadow: 0 0 2px grey;
     padding-bottom: 50px;
