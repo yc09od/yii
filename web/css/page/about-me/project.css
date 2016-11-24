@@ -9,7 +9,7 @@
     position: relative;
     background-color: white;
     top:-200px;
-    min-height: 500px;
+    min-height: 700px;
     box-shadow: 0 0 2px grey;
     border-top: solid #663300 10px;
 }
@@ -36,4 +36,8 @@
 
 .btn-side-nav:hover{
     background: #4f4f4f;
+}
+
+.test{
+    border: solid 1px red;
 }
