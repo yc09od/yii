@@ -17,6 +17,14 @@ h3.index-slide-content{
     color: #5F5E5A;
 }
 
+.margin-top-0{
+    margin-top: 0!important;
+}
+
+.margin-left-10{
+    margin-left: 10px;
+}
+
 @media screen and (max-width: 750px){
     #index-slide{
         min-height: 250px;

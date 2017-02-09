@@ -22,6 +22,7 @@ class AppAsset extends AssetBundle
         'css/bootstrap/bootstrap.min.css'
     ];
     public $js = [
+        'js/jquery-3.1.1.js',
         'js/bootstrap/bootstrap.min.js',
         'js/require.js'
     ];
